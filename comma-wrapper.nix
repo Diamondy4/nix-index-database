@@ -11,5 +11,5 @@ runCommand "comma-with-db-${comma.version}"
   mkdir -p $out/share/cache/nix-index
   ln -s ${nix-index-database} $out/share/cache/nix-index/files
   makeWrapper ${comma}/bin/, $out/bin/, \
-    --set XDG_CACHE_HOME $out/share/cache
+    --set NIX_INDEX_DATABASE $out/share/cache
 ''
